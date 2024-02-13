@@ -101,3 +101,50 @@ The category used for all blocks not specifying a category of their own.
 * Default: `[*.js]`
 
 Array of patterns to find block src files.
+
+## Extra
+
+The package provides a base class that can be built upon that can be imported like this:
+
+```
+const { blockEditor } = wp;
+const { RichText } = blockEditor;
+const __ = Drupal.t;
+
+import {DefaultBlock} from 'dgbuild';
+
+class Headline extends DefaultBlock {
+  edit({ className, attributes, setAttributes }) {
+    const { title } = attributes;
+  
+    return (
+      <div className={className}>
+        <RichText
+          identifier="title"
+          tagName="h1"
+          value={title}
+          placeholder={__('Title')}
+          onChange={n => setAttributes({title: n})}
+          onSplit={() => null}
+          unstableOnSplit={() => null}
+        />
+      </div>
+    );
+  }
+
+  getAttributes() {
+    return {
+      title: {
+        type: 'string',
+      },
+    };
+  }
+}
+
+const headline = new Headline('headline', __('Headline'), 'welcome-learn-more');
+
+headline.setDescription(__('A styled headline'));
+
+export default headline;
+
+```
