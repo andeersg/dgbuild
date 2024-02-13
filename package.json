@@ -1,0 +1,30 @@
+{
+  "name": "dgbuild",
+  "version": "1.0.0",
+  "description": "Build script for compiling Gutenberg blocks in Drupal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "dgbuild": "cli.js"
+  },
+  "type": "module",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andeersg/dgbuild.git"
+  },
+  "bugs": {
+    "url": "https://github.com/andeersg/dgbuild/issues"
+  },
+  "homepage": "https://github.com/andeersg/dgbuild#readme",
+  "author": "Anders Grendstadbakk <anders.2205@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "clsx": "^2.1.0",
+    "esbuild": "^0.20.0",
+    "fast-glob": "^3.3.2",
+    "yargs": "^17.7.2"
+  }
+}
