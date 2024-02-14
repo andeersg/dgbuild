@@ -20,7 +20,7 @@ Create a config file `dgbuild.config.json`
   "src_folder": "blocks/src",
   "dist_folder": "blocks/dest",
   "outfile": "index.js",
-  "banner": "Generated file, do not edit directly.",
+  "banner": "// Generated file, do not edit directly.\n",
   "defaultCategory": {
     "slug": "custom",
     "title": "Custom blocks"
@@ -86,7 +86,7 @@ The name of the generated file.
 * Type: `string`
 * Default: `''`
 
-A comment that will be put on top of the compiled file.
+A comment that will be put on top of the compiled file. *Must* be a valid comment (`// Generated file\n`)
 
 ### defaultCategory
 
