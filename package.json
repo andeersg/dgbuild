@@ -1,6 +1,6 @@
 {
   "name": "dgbuild",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Build script for compiling Gutenberg blocks in Drupal",
   "main": "index.js",
   "scripts": {
