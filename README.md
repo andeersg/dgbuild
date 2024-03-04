@@ -61,6 +61,8 @@ but you can override the glob pattern by specifing another in your config:
   glob: ['*.js'],
 }
 ```
+It expects each block to have a default export (class or object) where it can access `name` and `settings`.
+
 
 ## Options
 
